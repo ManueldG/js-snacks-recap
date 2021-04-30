@@ -2,6 +2,8 @@ function main(){
     snack1_1();
     snack2_1();
     snack1_2();
+    snack2_2();
+    snack3_2();
 }
 
 
@@ -93,3 +95,94 @@ function snack1_2(){
     
     console.log (animali.filter((x)=>{return x.classe=='mammiferi'} ));    
 }
+
+
+// SNACK 2/2
+// Crea un array di 8 oggetti che rappresentano delle persone: ogni persona ha un nome, un cognome e un'età.
+// Crea un nuovo array inserendo per ogni persona una frase con il nome e cognome e l'indicazione se può guidare, in base all'età.
+// 'Mario Rossi può guidare',
+// 'Luigi Verdi non può guidare',
+// 'Silvia Neri può guidare',
+
+function snack2_2(){
+const persona = [{nome:'Mario',cognome:'Rossi',eta:20},{nome:'Luigi',cognome:'Verdi',eta:15},{nome:'Silvia',cognome:'Neri',eta:30}];
+persona.forEach((el,i)=>{ ( console.log(persona[i].nome+' '+persona[i].cognome+((el.eta>18)? ' '  : ' non ')+'può guidare')) });
+}
+
+
+// SNACK 3
+// Crea un array di 8 oggetti che rappresenti i pc in vendita nel nostro negozio: ogni pc ha un nome, una marca, un booleano 
+// che indica se esce con Windows come OS di fabbrica (hasWindows: true oppure hasWindows: false) ed il prezzo
+// Creiamo un nuovo array che indichi i pc che hanno Windows e di questi andiamo a tirar fuori la differenza tra prezzo e scontato.
+
+function snack3_2(){
+let computers=[
+  {
+    nome:'dudu',
+    marca:'asus',
+    osWin:1,
+    prezzo: 500,
+    prezzoS: 450,
+  },
+  {
+    nome:'Mandriva',
+    marca:'acer',
+    osWin:0,
+    prezzo: 600,
+    prezzoS: 590,
+  },
+  {
+    nome:'Suse',
+    marca:'lenovo',
+    osWin:0,
+    prezzo: 1000,
+    prezzoS: 850,
+  },
+  {
+    nome:'DSL',
+    marca:'Chaintek',
+    osWin:0,
+    prezzo: 2300,
+    prezzoS: 2100,
+  },
+  {
+    nome:'Fuffi',
+    marca:'LG',
+    osWin:1,
+    prezzo: 970,
+    prezzoS: 960,
+  },
+  {
+    nome:'Infinite',
+    marca:'Trust',
+    osWin:1,
+    prezzo: 700,
+    prezzoS: 650,
+  },
+  {
+    nome:'Gnauo',
+    marca:'Lexodan',
+    osWin:1,
+    prezzo: 900,
+    prezzoS: 850,
+  },
+  {
+    nome:'LongHorn',
+    marca:'IBM',
+    osWin:1,
+    prezzo: 900,
+    prezzoS: 850,
+  }
+];
+
+
+let com=computers.filter((x)=>x.osWin).forEach((pc,i,arr)=>{
+                                                   arr.push({...pc,risparmio:pc.prezzo-pc.prezzoS});
+                                                    console.log(arr);
+                                                   });
+
+
+
+/*for (i in tmpCOM)
+console.log();*/
+                                                  }
