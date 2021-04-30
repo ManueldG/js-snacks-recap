@@ -1,5 +1,7 @@
 function main(){
+    snack1_1();
     snack2_1();
+    snack1_2();
 }
 
 
@@ -71,4 +73,23 @@ autoObj=autoObj.filter((ele)=>{
   return (ele.alimentazione=='benzina');
 })
 console.log(autoObj);
+}
+
+//SNACK 1
+// Crea un array di oggetti che rappresentano degli animali: ogni animale ha un nome, una famiglia e una classe.
+// Crea un nuovo array con la lista dei mammiferi.
+// [
+// { nome: 'leone', famiglia: 'felidi', classe: 'mammiferi' },
+// { nome: 'cane', 'famiglia: 'canidi', classe: 'mammiferi' },
+// { nome: 'gallina', famiglia: 'fasianidi', classe: 'uccelli' },
+// ]
+
+function snack1_2(){
+  const animali=[
+    { nome: 'leone', famiglia: 'felidi', classe: 'mammiferi' },
+    { nome: 'cane', famiglia: 'canidi', classe: 'mammiferi' },
+    { nome: 'gallina', famiglia: 'fasianidi', classe: 'uccelli' },
+    ];
+    
+    console.log (animali.filter((x)=>{return x.classe=='mammiferi'} ));    
 }
