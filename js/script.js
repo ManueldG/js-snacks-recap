@@ -217,7 +217,7 @@ Il software deve guardare se c'è un social aperto ed eliminarlo dalle tab.
 Nel caso la tab fosse attiva, deve attivare la successiva.*/
 
 function snack2_3(){
-  let obj = { "tab": ("Facebook GitHub Gmail").split(' '),
+  let obj = { "tab": ("Facebook GitHub Gmail Istagram Plus DEV codePen CodeWars").split(' '),
               "activeTab" : 0,
             };
   console.log(obj);
