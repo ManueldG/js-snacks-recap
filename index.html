@@ -3,13 +3,26 @@
 <head>
 <link rel="stylesheet" href="http://casaalmada.hostinggratis.it/doc/css/reset.css">
 <link rel="stylesheet" href="css/style.css">
-<script src="js/script.js"></script>
+
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title></title>
 </head>
-<body onload="main()">
-    
+<body>
+    <script src="js/script.js"></script>
+    <script>
+        var IE4 = (document.all && !document.getElementById)? true : false;
+        var IE5 = (document.getElementById && document.all)? true : false;
+        var ua = window.navigator.userAgent;
+        var indice = ua.indexOf("MSIE ");
+        var msie = parseInt(ua.substring(indice + 5, ua.indexOf(".", indice)));
+        console.log(ua,msie);        
+        if (IE4 || IE5||msie>-1) alert('Internet Explorer '+msie+' è morto cambia Browser');
+        else
+        console.log('continua');
+        main();
+    </script>
+
 </body>
 </html>

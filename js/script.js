@@ -1,15 +1,21 @@
 function main(){
-    snack1_1();
-    snack2_1();
-    snack1_2();
-    snack2_2();
-    snack3_2();
+    
+    
+    
+      snack1_1();
+      snack2_1();
+      snack1_2();
+      snack2_2();
+      snack3_2();
+    
+    
 }
 
 
 function rnd(min,max){  
   return (Math.floor((Math.random()*(max-min)+min+1)));  
 };
+
 
 /*************************************************************************************************************  
 *Snack 1/1                                                                                                   *
@@ -115,7 +121,8 @@ persona.forEach((el,i)=>{ ( console.log(persona[i].nome+' '+persona[i].cognome+(
 // che indica se esce con Windows come OS di fabbrica (hasWindows: true oppure hasWindows: false) ed il prezzo
 // Creiamo un nuovo array che indichi i pc che hanno Windows e di questi andiamo a tirar fuori la differenza tra prezzo e scontato.
 
-function snack3_2(){
+function snack3_2()
+{
 let computers=[
   {
     nome:'dudu',
@@ -176,13 +183,13 @@ let computers=[
 ];
 
 
-let com=computers.filter((x)=>x.osWin).forEach((pc,i,arr)=>{
-                                                   arr.push({...pc,risparmio:pc.prezzo-pc.prezzoS});
-                                                    console.log(arr);
-                                                   });
+let com=computers
+        .map((pc)=> ({...pc,risparmio:pc.prezzo-pc.prezzoS}))
+        .filter((x)=>x.osWin);
+
+console.log(computers,com);
 
 
 
-/*for (i in tmpCOM)
-console.log();*/
-                                                  }
+
+}
