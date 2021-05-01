@@ -220,6 +220,9 @@ function snack2_3(){
   let obj = { "tab": ("Facebook GitHub Gmail Istagram Plus DEV codePen CodeWars").split(' '),
               "activeTab" : 0,
             };
-  console.log(obj);
-
+  console.log(obj);          
+  obj.tab.filter((x,i,arr)=>{
+    console.log(x,i,arr);
+  });
+  
 }
