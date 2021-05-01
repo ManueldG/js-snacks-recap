@@ -10,18 +10,26 @@
 <title></title>
 </head>
 <body>
+
+    <div id="table">
+
+    </div>
+
+
+    <!-- VUE js  Sviluppo-->
+    <!--<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>-->
+    <!--Produzione-->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+
     <script src="js/script.js"></script>
     <script>
         var IE4 = (document.all && !document.getElementById)? true : false;
         var IE5 = (document.getElementById && document.all)? true : false;
         var ua = window.navigator.userAgent;
         var indice = ua.indexOf("MSIE ");
-        var msie = parseInt(ua.substring(indice + 5, ua.indexOf(".", indice)));
-        console.log(ua,msie);        
+        var msie = parseInt(ua.substring(indice + 5, ua.indexOf(".", indice)));      
         if (IE4 || IE5||msie>-1) alert('Internet Explorer '+msie+' è morto cambia Browser');
-        else
-        console.log('continua');
-        main();
+        else main();
     </script>
 
 </body>

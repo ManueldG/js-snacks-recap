@@ -1,16 +1,22 @@
-function main(){
-    
-    
-    
-      /*snack1_1();
-      snack2_1();
-      snack1_2();
-      snack2_2();
-      snack3_2();
-      snack1_3();*/
-      snack2_3();
-    
-    
+function main(){  
+  console.log("\n snack 1 primo giorno\n");
+  snack1_1();
+  console.log("\n snack 2 primo giorno\n");
+  snack2_1();
+  console.log("\n snack 1 secondo giorno\n");
+  snack1_2();
+  console.log("\n snack 2 secondo giorno\n");
+  snack2_2();
+  console.log("\n snack 3 secondo giorno\n");
+  snack3_2();
+  console.log("\n snack 1 terzo giorno\n");
+  snack1_3();
+  console.log("\n snack 2 terzo giorno\n");
+  snack2_3();
+  console.log("\n snack 3 terzo giorno\n");
+  snack3_3();
+  console.log("\n snack 4 terzo giorno\n");
+  snack4_3();    
 }
 
 
@@ -199,10 +205,11 @@ Es: ['pippo', 'PLUTO', 'Paperino'] => ['Pippo', 'Pluto', 'Paperino']*/
 
 function snack1_3()
 {
-  let str=['pippo', 'PLUTO', 'Paperino'];
-  console.log(str.map((x)=>(toUpperCaseFL(x.toLowerCase())) ) ); 
-
-  function toUpperCaseFL(stringa){return (stringa[0].toUpperCase()+stringa.substring(1));}
+  let str=['pippo', 'PLUTO', 'PaPeRiNo'];
+  let strNew = (str.map((x)=>(x[0].toUpperCase()+x.substring(1).toLowerCase())   ) );
+  console.log ("vecchia stringa: "+str,"\nnuova stringa: "+strNew);
+  
+  
 }
 
 /*SNACK 2/3
@@ -221,7 +228,57 @@ function snack2_3(){
               "activeTab" : 0,
             };
          
-  let objTmp = obj.tab.filter((x)=>(!("Facebook Istagram Plus").split(' ').includes(x)));
-  objTmp = {...objTmp,activeTab : ++obj.activeTab} ;
-  console.log(objTmp);  
+  let objTmp = ({'tab':obj.tab.filter((x)=>(!("Facebook Istagram Plus").split(' ').includes(x)))});
+  objTmp = {...objTmp,activeTab : obj.activeTab} ;
+
+  console.log("\nOggetto Originale: "+obj.tab+" Scheda attiva: "+(obj.activeTab)
+            +"\nOggetto filtrato: "+objTmp.tab+" Scheda attiva: "+objTmp.activeTab);  
 }
+
+/*
+SNACK 3/3  -> si potrebbe ottimizzare con una funzione separata per il capitalize
+A partire da un array di stringhe, crea un secondo array formattando le stringhe del primo array in minuscolo e con l'iniziale maiuscola.
+Es: ['pippo', 'PLUTO', 'Paperino'] => ['Pippo', 'Pluto', 'Paperino']
+*/
+
+function snack3_3()
+{
+  let str=['pippo','PLUTO','PaPeRiNo'];
+  console.log("\narray di stringhe "+str+"\narray di stringhe formattato "+toUpperCaseFL(str)); 
+
+    function toUpperCaseFL(arrStr){      
+       return arrStr.map((str)=>(str[0].toUpperCase()+str.substring(1).toLowerCase()));
+      }
+    }
+
+
+
+/*
+SNACK 4 -> VUE 
+Partendo da un array di oggetti con i contatti di una rubrica con nome, cognome, numero, attivo (true,false)
+Andiamo a stampare nome cognome e numero dentro una lista.
+Fare in modo poi che i contatti non attivi (attivo: false) siano stampati di colore rosso mentre gli altri 
+normalmente di nero. Cliccando sul numero della persona fate in modo che appaia in console il cognome della 
+persona di cui è stato cliccato il numero
+*/ 
+  function snack4_3(){
+
+  let app = new Vue({
+    el:'#table',
+    data: {
+      contatti:
+      [{
+        nome:'Gianni',
+        cognome:'Rossi',
+        num:'3242342152',
+        attivo:1,
+      }]
+    },
+    methods: {},
+  })
+
+  console.log(app.$data.contatti[0].nome);
+
+  }
+
+
