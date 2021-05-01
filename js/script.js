@@ -7,6 +7,8 @@ function main(){
       snack1_2();
       snack2_2();
       snack3_2();
+      snack1_3();
+      snack2_3();
     
     
 }
@@ -188,8 +190,36 @@ let com=computers
         .filter((x)=>x.osWin);
 
 console.log(computers,com);
+}
 
 
+/*SNACK 1/3
+A partire da un array di stringhe, crea un secondo array formattando le stringhe del primo array in minuscolo e con l'iniziale maiuscola.
+Es: ['pippo', 'PLUTO', 'Paperino'] => ['Pippo', 'Pluto', 'Paperino']*/
 
+function snack1_3()
+{
+  let str=['pippo', 'PLUTO', 'Paperino'];
+  console.log(str.map((x)=>(toUpperCaseFL(x.toLowerCase())) ) ); 
+
+  function toUpperCaseFL(stringa){return (stringa[0].toUpperCase()+stringa.substring(1));}
+}
+
+/*SNACK 2/3
+Un oggetto rappresenta una finestra di un browser e contiene due campi: 
+un array di tab aperte
+un numero che indica l'indice della tab aperta nell'array:
+{
+    "tab": ["Facebook", "GitHub", "Gmail"],
+    "activeTab": 0
+}
+Il software deve guardare se c'è un social aperto ed eliminarlo dalle tab.
+Nel caso la tab fosse attiva, deve attivare la successiva.*/
+
+function snack2_3(){
+  let obj = { "tab": ("Facebook GitHub Gmail").split(' '),
+              "activeTab" : 0,
+            };
+  console.log(obj);
 
 }
