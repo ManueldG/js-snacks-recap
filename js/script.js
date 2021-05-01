@@ -2,12 +2,12 @@ function main(){
     
     
     
-      snack1_1();
+      /*snack1_1();
       snack2_1();
       snack1_2();
       snack2_2();
       snack3_2();
-      snack1_3();
+      snack1_3();*/
       snack2_3();
     
     
@@ -220,9 +220,8 @@ function snack2_3(){
   let obj = { "tab": ("Facebook GitHub Gmail Istagram Plus DEV codePen CodeWars").split(' '),
               "activeTab" : 0,
             };
-  console.log(obj);          
-  obj.tab.filter((x,i,arr)=>{
-    console.log(x,i,arr);
-  });
-  
+         
+  let objTmp = obj.tab.filter((x)=>(!("Facebook Istagram Plus").split(' ').includes(x)));
+  objTmp = {...objTmp,activeTab : ++obj.activeTab} ;
+  console.log(objTmp);  
 }
