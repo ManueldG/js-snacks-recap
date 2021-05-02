@@ -271,7 +271,7 @@ persona di cui è stato cliccato il numero
         nome:'Robert',
         cognome:'Baden-Powell',
         num:'3242342152',
-        attivo:0,
+        attivo:1,
       },
       {
         nome:'Ryan',
@@ -302,7 +302,7 @@ persona di cui è stato cliccato il numero
         nome:'Epanimonda',
         cognome:'di Mantinea',
         num:'3242342152',
-        attivo:1,
+        attivo:0,
       },
       {
         nome:'Ansel',
