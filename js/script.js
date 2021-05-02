@@ -296,7 +296,7 @@ persona di cui è stato cliccato il numero
         nome:'Daneel',
         cognome:'Olivaw',
         num:'3242342152',
-        attivo:1,
+        attivo:0,
       },
       {
         nome:'Epanimonda',
@@ -319,7 +319,7 @@ persona di cui è stato cliccato il numero
     ]
     },
     methods: {
-      print:function(x){console.log(x.nome);}
+      print:function(x){console.log(x.cognome);}
     },
   })
 

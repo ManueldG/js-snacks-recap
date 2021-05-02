@@ -14,7 +14,7 @@
     <div id="table">
         <ul>
             <li :class="{'active' : i.attivo}" v-for="i in contatti" >
-                {{i.nome+' '+i.cognome+': '}} <span v-on:click="i.attivo=!i.attivo; print(i);">{{i.num}}</span>
+                {{i.nome+' '+i.cognome+': '}} <span v-on:click="/*i.attivo=!i.attivo;*/ print(i);">{{i.num}}</span>
             </li>
         </ul>
 
