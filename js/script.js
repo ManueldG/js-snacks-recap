@@ -268,16 +268,62 @@ persona di cui è stato cliccato il numero
     data: {
       contatti:
       [{
-        nome:'Gianni',
-        cognome:'Rossi',
+        nome:'Robert',
+        cognome:'Baden-Powell',
+        num:'3242342152',
+        attivo:0,
+      },
+      {
+        nome:'Ryan',
+        cognome:'Russel',
         num:'3242342152',
         attivo:1,
-      }]
+      },
+      {
+        nome:'Linus Benedict',
+        cognome:'Torvalds',
+        num:'3242342152',
+        attivo:1,
+      },
+      {
+        nome:'Jack',
+        cognome:'Tramiel',
+        num:'3242342152',
+        attivo:1,
+        
+      },
+      {
+        nome:'Daneel',
+        cognome:'Olivaw',
+        num:'3242342152',
+        attivo:1,
+      },
+      {
+        nome:'Epanimonda',
+        cognome:'di Mantinea',
+        num:'3242342152',
+        attivo:1,
+      },
+      {
+        nome:'Ansel',
+        cognome:'Adams',
+        num:'3242342152',
+        attivo:1,
+      },
+      {
+        nome:'Akela',
+        cognome:'Wolf',
+        num:'3242342152',
+        attivo:1,
+      }
+    ]
     },
-    methods: {},
+    methods: {
+      print:function(x){console.log(x.nome);}
+    },
   })
 
-  console.log(app.$data.contatti[0].nome);
+  
 
   }
 
